@@ -3,15 +3,15 @@ pragma solidity ^0.4.24;
 // ----------------------------------------------------------------------------
 // 'GLOBALTRUSTFUND' token contract
 //
-// Deployed to : 0xa608EB09F7a84bAe3cBE41Dc1Ee359407cB36B1E
-// Symbol      : GFT
+// Deployed to : 0xE184A46d6D34197F9e39f7747F79F10e4d7CC7b5
+// Symbol      : GTF
 // Name        : GLOBALTRUSTFUND Token
 // Total supply: 20200000
 // Decimals    : 8
 //
 // Enjoy.
 //
-// (c) by GLOBALTRUSTFUND with GFT TOKEN / GFT Consulting Pty Ltd Au 2019. The GFT Licence.
+// (c) by Moritz Neto with BokkyPooBah / Bok Consulting Pty Ltd Au 2017. The MIT Licence.
 // ----------------------------------------------------------------------------
 
 
@@ -58,7 +58,7 @@ contract ERC20Interface {
 // ----------------------------------------------------------------------------
 // Contract function to receive approval and execute function in one call
 //
-// Borrowed from GLOBALTRUSTFUND Token
+// Borrowed from MiniMeToken
 // ----------------------------------------------------------------------------
 contract ApproveAndCallFallBack {
     function receiveApproval(address from, uint256 tokens, address token, bytes data) public;
@@ -99,7 +99,7 @@ contract Owned {
 // ERC20 Token, with the addition of symbol, name and decimals and assisted
 // token transfers
 // ----------------------------------------------------------------------------
-contract GLOBALTRUSTFUND Token is ERC20Interface, Owned, SafeMath {
+contract GLOBALTRUSTFUND is ERC20Interface, Owned, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -114,11 +114,11 @@ contract GLOBALTRUSTFUND Token is ERC20Interface, Owned, SafeMath {
     // ------------------------------------------------------------------------
     constructor() public {
         symbol = "GTF";
-        name = "Globaltrustfund Token";
+        name = "GLOBALTRUSTFUND Token";
         decimals = 8;
         _totalSupply = 2020000000000000;
-        balances[0xa608EB09F7a84bAe3cBE41Dc1Ee359407cB36B1E] = _totalSupply;
-        emit Transfer(address(0), 0xa608EB09F7a84bAe3cBE41Dc1Ee359407cB36B1E, _totalSupply);
+        balances[0xE184A46d6D34197F9e39f7747F79F10e4d7CC7b5] = _totalSupply;
+        emit Transfer(address(0), 0xE184A46d6D34197F9e39f7747F79F10e4d7CC7b5, _totalSupply);
     }
 
 
@@ -155,7 +155,7 @@ contract GLOBALTRUSTFUND Token is ERC20Interface, Owned, SafeMath {
     // Token owner can approve for spender to transferFrom(...) tokens
     // from the token owner's account
     //
-    // https://github.com/GLOBALTRUSTFUND/GTF/new/master/GTF/GTFTOKEN-20-token-standard.md
+    // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
     // recommends that there are no checks for the approval double-spend attack
     // as this should be implemented in user interfaces 
     // ------------------------------------------------------------------------

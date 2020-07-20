@@ -3,7 +3,7 @@ pragma solidity ^0.4.24;
 // ----------------------------------------------------------------------------
 // 'GLOBALTRUSTFUND' token contract
 //
-// Deployed to : 0xE184A46d6D34197F9e39f7747F79F10e4d7CC7b5
+// Deployed to : 0xa608EB09F7a84bAe3cBE41Dc1Ee359407cB36B1E
 // Symbol      : GTF
 // Name        : GLOBALTRUSTFUND Token
 // Total supply: 20200000
@@ -117,8 +117,8 @@ contract GLOBALTRUSTFUND is ERC20Interface, Owned, SafeMath {
         name = "GLOBALTRUSTFUND Token";
         decimals = 8;
         _totalSupply = 2020000000000000;
-        balances[0xE184A46d6D34197F9e39f7747F79F10e4d7CC7b5] = _totalSupply;
-        emit Transfer(address(0), 0xE184A46d6D34197F9e39f7747F79F10e4d7CC7b5, _totalSupply);
+        balances[0xa608EB09F7a84bAe3cBE41Dc1Ee359407cB36B1E] = _totalSupply;
+        emit Transfer(address(0), 0xa608EB09F7a84bAe3cBE41Dc1Ee359407cB36B1E, _totalSupply);
     }
 
 
